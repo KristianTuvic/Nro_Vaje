@@ -1,0 +1,60 @@
+\documentclass{beamer}
+
+
+\title{Predstavitev 1.naloge}
+\author{Kristian Tuvić}
+\institute{Univerza v Ljubljani}
+\date{7. november 2024}
+
+\begin{document}
+
+% Uvodna prosojnica
+\begin{frame}
+    \titlepage
+\end{frame}
+
+% Kazalo vsebine
+\begin{frame}{Kazalo vsebine}
+    \tableofcontents
+\end{frame}
+
+% Prosojnica 3: Opis vsebine datoteke naloga1_1.txt
+\section{Vsebina datoteke naloga1\_1.txt}
+\begin{frame}{Vsebina datoteke \texttt{naloga1\_1.txt}}
+    \begin{itemize}
+        \item V prvi vrstici: ime podatkovne datoteke
+        \item V drugi vrstici: število vrstic in število podatkov v vsaki vrstici (100 vrstic in v vsaki 1 podatek)
+        \item Na voljo so podatki o časovnih intervalih pri katerih je bila izmerjena moč
+        \item MATLAB funkcija za branje datoteke: importdata
+            \begin{itemize}
+                \item Vhodni podatki: ime datoteke, ločilo med podatki, število začetnih vrstic, ki ga pri branju izpustimo
+                \item Izhodni podatki: vektor vrednosti časov \( t \)
+            \end{itemize}
+    \end{itemize}
+\end{frame}
+
+% Prosojnica 4: Graf P(t)
+\section{Graf funkcije \( P(t) \)}
+\begin{frame}{Graf \( P(t) \)}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.8\textwidth]{graf_Pt.png}
+        \caption{Graf funkcije \( P(t) \), ki prikazuje odvisnost moči od časa}
+    \end{figure}
+\end{frame}
+
+% Prosojnica 5: Trapezna funkcija za izračun integrala
+\section{Trapezna formula}
+\begin{frame}{Trapezna formula za izračun integrala}
+    Trapezna formula za integral:
+    \[
+    \int_a^b f(x) \, dx \approx \frac{\Delta x}{2} \left( f(x_0) + 2f(x_1) + 2f(x_2) + \dots + 2f(x_{n-1}) + f(x_n) \right)
+    \]
+    
+    Rezultat integrala iz naloge:
+    \[
+    \int_{t_{\text{min}}}^{t_{\text{max}}} P(t) \, dt \approx \text{17,1665}
+    \]
+\end{frame}
+
+\end{document}
